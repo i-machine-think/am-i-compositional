@@ -6,6 +6,7 @@ Dieuwke Hupkes, Verna Dankers, Mathijs Mul and Elia Bruni. 2018. [The compositio
 
 Below we describe the structure of the repository, explanation for usage of the individual scripts can be found in the corresponding folders.
 Please cite the paper if you want to use the resources in this repository.
+If you have any questions, feel free to ask them: <dieuwkehupkes@gmail.com>.
 
 ## Tests
 
