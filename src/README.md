@@ -4,6 +4,8 @@ We will continue to add more useful scripts, if you miss a script that you think
 
 ## 1 - train: Scripts to train models
 
+For compositionality tests that require model training, we provide three training scripts, named `train_lstms2s_opennmt.sh`, `train_transformer_opennmt.sh`, `train_convs2s_fairseq.sh`.
+
 Please fill out the following parameters in the training scripts:
 - `PATH`: path to the pcfgset data.
 - `DATA_FOLDER`: folder to store the OpenNMT preprocessed data in.
@@ -13,7 +15,7 @@ And indicate the following two parameters in the command line:
 - `EXPERIMENT_NAME`: `pcfg | systematicity | productivity | substitutivity`.
 - `SUBTYPE`: `primitive | equally_distributed`, only applies to substitutivity.
 
-Afterwards, train models using the following commands:
+Afterwards, place the scripts inside of the OpenNMT or Fairseq main folder and train models using the following commands:
 - `bash train_lstms2s_opennmt.sh pcfg`
 - `bash train_lstms2s_opennmt.sh systematicity`
 - `bash train_lstms2s_opennmt.sh productivity`
