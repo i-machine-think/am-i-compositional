@@ -56,7 +56,7 @@ else
     exit 0
 fi
 
-/usr/bin/mkdir $MODEL_FOLDER
+mkdir $MODEL_FOLDER
 
 # Repeat three times to get averaged performance metrics
 for i in 1
@@ -64,34 +64,34 @@ do
     FILENAME="${MODEL_FOLDER}/lstms2s_run=${i}_experiment=${EXPERIMENT_NAME}"
 
     # Use OpenNMT file to preprocess the data into format usable during training
-    /usr/bin/python3.6 preprocess.py -train_src "${PATH}/${TRAIN}.src" -train_tgt "${PATH}/${TRAIN}.tgt" \
+    python3.6 preprocess.py -train_src "${PATH}/${TRAIN}.src" -train_tgt "${PATH}/${TRAIN}.tgt" \
                             -valid_src "${PATH}/${DEV}.src" -valid_tgt "${PATH}/${DEV}.tgt" \
                             -save_data $DATA_FOLDER
     wait
 
     # Train bidirectional model with embeddings of size 512, using batch size 64
-    /usr/bin/python3.6 train.py -word_vec_size 512 -encoder_type brnn -data $DATA_FOLDER -save_model $FILENAME \
+    python3.6 train.py -word_vec_size 512 -encoder_type brnn -data $DATA_FOLDER -save_model $FILENAME \
                        -gpu_ranks 0 -valid_steps $EPOCH_STEPS -train_steps $TOTAL_STEPS \
                        -batch_size 64 -save_checkpoint_steps $EPOCH_STEPS 2> "${FILENAME}_trace.txt"
     wait
 
     # Out of the saved models, use the best-performing one based on validation data
-    /usr/bin/python3.6 select_model.py --model_name $FILENAME --steps $EPOCH_STEPS \
+    python3.6 select_model.py --model_name $FILENAME --steps $EPOCH_STEPS \
                               --trace "${FILENAME}_trace.txt" --folder $MODEL_FOLDER
     wait
 
     if [ "${EXPERIMENT_NAME}" = "substitutivity" ]; then
-        /usr/bin/python3.6 translate.py -src "${PATH}/${TEST}.src" -tgt "${PATH}/${TEST}.tgt" \
-                                        -model "${FILENAME}.pt" -gpu 0 -batch_size 64 -output "${FILENAME}_pred.txt"
+        python3.6 translate.py -src "${PATH}/${TEST}.src" -tgt "${PATH}/${TEST}.tgt" \
+                               -model "${FILENAME}.pt" -gpu 0 -batch_size 64 -output "${FILENAME}_pred.txt"
         wait
-        /usr/bin/python3.6 translate.py -src "${PATH}/${TEST}_twin.src" -tgt "${PATH}/${TEST}_twin.tgt" \
-                                        -model "${FILENAME}.pt" -gpu 0 -batch_size 64 -output "${FILENAME}_pred_twin.txt"
+        python3.6 translate.py -src "${PATH}/${TEST}_twin.src" -tgt "${PATH}/${TEST}_twin.tgt" \
+                               -model "${FILENAME}.pt" -gpu 0 -batch_size 64 -output "${FILENAME}_pred_twin.txt"
         wait
-        /usr/bin/python3.6 consistency_compare.py --file1 -output "${FILENAME}_pred.txt" --file2 -output "${FILENAME}_pred_twin.txt" > "${FILENAME}_consistency.txt"
+        python3.6 consistency_compare.py --file1 -output "${FILENAME}_pred.txt" --file2 -output "${FILENAME}_pred_twin.txt" > "${FILENAME}_consistency.txt"
         wait
     else
         # Evaluate model on test data
-        /usr/bin/python3.6 translate.py -src "${PATH}/${TEST}.src" -tgt "${PATH}/${TEST}.tgt" \
+        python3.6 translate.py -src "${PATH}/${TEST}.src" -tgt "${PATH}/${TEST}.tgt" \
                                -model "${FILENAME}.pt" -gpu 0 -batch_size 64 \
                                -output "${FILENAME}_pred.txt" 2> "${FILENAME}_taskaccuracy.txt"
         wait
