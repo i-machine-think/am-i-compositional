@@ -4,6 +4,8 @@ We will continue to add more useful scripts, if you miss a script that you think
 
 ## 1 - train: Scripts to train models
 
+### Experiments: PCFG SET, Systematicity, Productivity, Substitutivity
+
 For compositionality tests that require model training, we provide three training scripts, named `train_lstms2s_opennmt.sh`, `train_transformer_opennmt.sh`, `train_convs2s_fairseq.sh`.
 
 Please fill out the following parameters in the training scripts:
@@ -21,6 +23,13 @@ Afterwards, place the scripts inside of the OpenNMT or Fairseq main folder and t
 - `bash train_lstms2s_opennmt.sh productivity`
 - `bash train_lstms2s_opennmt.sh substitutivity primitive`
 - `bash train_lstms2s_opennmt.sh substitutivity equally_distributed`
+
+### Experiment: Localism
+
+To conduct the localism experiment using a fully trained PCFG SET standard model, please run the following command:
+- For ConvS2S run Fairseq with: `python3.6 localism.py preprocessed_datafolder --src path_to_data/localism/unrolled_test.tsv --path model_name.pt --batch-size 1 --buffer-size 1 --beam 5`
+  `preprocessed_datafolder` refers to the data corresponding to the fully trained PCFG SET model.
+- For LSTMS2S and Transformer run OpenNMT with: `python3.6 localism.py -model "model_name.pt" -src path_to_data/localism/unrolled_test.tsv -gpu 0`
 
 ## 2 - evaluate: Auxiliary scripts
 
