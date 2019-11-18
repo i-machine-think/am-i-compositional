@@ -18,4 +18,11 @@ if __name__ == "__main__":
     parser.add_argument("--one_sided", action="store_true")
     args = vars(parser.parse_args())
 
-    p_test(args["results1"], args["results1"], args["one_sided"])
+    results1 = args["results1"]
+    results2 = args["results2"]
+    one_sided = args["one_sided"]
+
+    p = p_test(results1, results2, one_sided)
+    print(f"Performance model 1: {results1}")
+    print(f"Performance model 2: {results2}")
+    print(f"T-test with one-sided = {one_sided}, p-value = {p}")
