@@ -2,11 +2,14 @@
 
 We will continue to add more useful scripts, if you miss a script that you think could be useful to you, please reach out to <dieuwkehupkes@gmail.com>.
 
-For compositionality tests that require model training, we provide three training scripts, named `train_lstms2s_opennmt.sh`, `train_transformer_opennmt.sh`, `train_convs2s_fairseq.sh`.
+Three types of scripts are provided:
+- Compositionality tests that require model training using OpenNMT or Fairseq named `train_lstms2s.sh`, `train_transformer.sh`, `train_convs2s.sh`.
+- Compositionality tests that use a trained model and require translating using OpenNMT or Fairseq `translate_lstms2s.sh`, `translate_transformer.sh`, `translate_convs2s.sh`.
+- Scripts that take emitted translations and compute new statistics or visualise results: `accuracy.py`, `consistency.py`, any script named `plot_..._.py`, `accuracy_per_pattern.py`, `significance_testing.py` and `eos_problem.py`.
 
-Please fill out the following parameters in the training scripts:
-- `PATH`: path to the pcfgset data.
-- `DATA_FOLDER`: folder to store the OpenNMT preprocessed data in.
+Please fill out the following parameters in the train and translate scripts:
+- `DATA_FOLDER`: path to the pcfgset data.
+- `PROCESSED_DATA_FOLDER`: folder to store the OpenNMT preprocessed data in.
 - `MODEL_FOLDER`: folder to store the models and related files in.
 
 ## Experiment: Task accuracy (Section 7.1)
