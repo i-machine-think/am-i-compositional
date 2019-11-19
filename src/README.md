@@ -70,6 +70,7 @@ Dependent on the model used, run `./train_lstms2s.sh substitutivity primitive` o
 Dependent on the model used, run `./translate_lstms2s.sh localism` or `./translate_transformer.sh localism` from within OpenNMT, or `./translate_convs2s.sh localism` from within Fairseq.
 
 #### 2. Primitive setup with varying input lengths (Section 7.5.2)
+Dependent on the model used, run `./translate_lstms2s.sh localism_primitive` or `./translate_transformer.sh localism_primitive` from within OpenNMT, or `./translate_convs2s.sh localism_primitive` from within Fairseq.
 
 ## Experiment: Overgeneralisation peak (Section 7.6)
 
