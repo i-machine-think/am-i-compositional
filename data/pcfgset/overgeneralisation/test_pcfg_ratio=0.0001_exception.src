@@ -1,0 +1,9 @@
+reverse echo Y18 M3 Y4 V19 E20
+reverse echo B12 W13
+append remove_first repeat prepend M8 D13 W3 I17 M15 , R7 N5 L1 M8 , reverse echo copy copy S3 I17 X10 L2 , F16 F18 F10 E14
+copy copy swap_first_last reverse echo prepend N4 U5 I11 X14 W7 , X9 O9
+prepend remove_first R19 J1 B11 C19 , A16 T11 F14 , N10 N12 F12
+echo prepend remove_first R7 O3 G19 , A1 J10 J12 U3 F8 , L9 A4 R18 Z16
+echo remove_first Q16 W11 H10 J4 , Y2 V20 N17
+prepend reverse R1 J11 , K8 L16 Y18
+prepend reverse repeat O16 H4 S3 P20 , append remove_first N2 U5 N11 O5 D3 , X7 I17 N12 , repeat F10 Y5 M1 N18
