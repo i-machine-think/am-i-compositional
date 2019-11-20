@@ -7,14 +7,14 @@ Three types of scripts are provided:
 - Compositionality tests that use a trained model and require translating using OpenNMT or Fairseq `translate_lstms2s.sh`, `translate_transformer.sh`, `translate_convs2s.sh`.
 - Scripts that take emitted translations and compute new statistics or visualise results: `accuracy.py`, `consistency.py`, any script named `plot_..._.py`, `accuracy_per_pattern.py`, `significance_testing.py` and `eos_problem.py`.
 
-Please fill out the following parameters in the train and translate scripts:
+Please fill out the following parameters in the train and translate scripts, that are set to match the paths from this repository by default:
 - `DATA_FOLDER`: path to the pcfgset data.
 - `PROCESSED_DATA_FOLDER`: folder to store the OpenNMT preprocessed data in.
 - `MODEL_FOLDER`: folder to store the models and related files in.
 
 ## Experiment: Task accuracy (Section 7.1)
 
-#### 1. Main experiment (Section 7.1)
+#### 1. <span style="color:blue">train</span> -- Main experiment (Section 7.1)
 
 Dependent on the model used, run `./train_lstms2s.sh pcfg` or `./train_transformer.sh pcfg` from within OpenNMT, or `./train_convs2s.sh pcfg` from within Fairseq.
 
@@ -33,7 +33,7 @@ Dependent on the model used, run `./train_lstms2s.sh pcfg` or `./train_transform
 
 ## Experiment: Systematicity (Section 7.2)
 
-#### 1. Main experiment (Section 7.2)
+#### 1. <span style="color:blue">train</span> -- Main experiment (Section 7.2)
 
 Dependent on the model used, run `./train_lstms2s.sh systematicity` or `./train_transformer.sh systematicity` from within OpenNMT, or `./train_convs2s.sh systematicity` from within Fairseq.
 
@@ -45,10 +45,10 @@ The `pattern` argument refers to the consecutive functions of interest.
 
 ## Experiment: Productivity (Section 7.3)
 
-#### 1. Main experiment (Section 7.3)
+#### 1. <span style="color:blue">train</span> -- Main experiment (Section 7.3)
 Dependent on the model used, run `./train_lstms2s.sh productivity` or `./train_transformer.sh productivity` from within OpenNMT, or `./train_convs2s.sh productivity` from within Fairseq.
 
-#### 2. Correlation length & depth (Section 7.3.1)
+#### 2. <span style="color:purple">evaluate</span> -- Correlation length & depth (Section 7.3.1)
 
 #### 3. EOS problem (Section 7.3)
 
