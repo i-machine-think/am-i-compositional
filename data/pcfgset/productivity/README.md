@@ -4,7 +4,7 @@
 
 With our productivity test, we focus purely on this extrapolation aspect, by studying models' ability to successfully generalise to longer sequences, which we will call the model's productive power.
 For PCFG SET, we simply pooled the training and testing data (see the `../pcfgset/` folder) and split the samples based on the number of functions in the input sequence.
-Sequences containing up to eight functions are collected in the training set, consisting of 81 thousand sequences, while input sequences containing at least nine functions are used for evaluation and collected in a test set containing ten thousand sequences.
+Sequences containing up to eight functions are collected in the training set, consisting of 81 thousand sequences, while input sequences containing at least nine functions are used for evaluation and collected in a test set containing 11 thousand sequences.
 
 ### About the data
 
