@@ -33,4 +33,4 @@ To process the sample listed above, the following tasks are carried out:
 2. The model output replaces placeholder `*1` in the second line. Assume `*1` becomes `M5 A3`.
 3. `repeat M5 A3` from the second line is processed by the model. Assume the output is `M5 A3 M5 A3`.
 4. `repeat copy M5 B15` from the third line is processed by the model. Assume the output is `M5 B15 M5 B15`.
-5. The consistency score is the comparison of outputs from steps (3) and (4). In this example, the outputs are inconsistent.
+5. The consistency score is the comparison of outputs from steps (3) and (4). In this example, the outputs are inconsistent, the output from step (3) is inaccurate and the output from step (4) is accurate.
