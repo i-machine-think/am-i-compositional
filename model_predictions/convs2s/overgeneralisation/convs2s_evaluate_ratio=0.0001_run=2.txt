@@ -1,0 +1,105 @@
+RUN 2
+
+Epoch 1
+Adapted - Sequence Accuracy 0.0
+Original - Sequence Accuracy 0.6
+
+Epoch 2
+Adapted - Sequence Accuracy 0.0
+Original - Sequence Accuracy 0.8
+
+Epoch 3
+Adapted - Sequence Accuracy 0.0
+Original - Sequence Accuracy 0.6
+
+Epoch 4
+Adapted - Sequence Accuracy 0.0
+Original - Sequence Accuracy 0.8
+
+Epoch 5
+Adapted - Sequence Accuracy 0.0
+Original - Sequence Accuracy 0.6
+
+Epoch 6
+Adapted - Sequence Accuracy 0.0
+Original - Sequence Accuracy 0.4
+
+Epoch 7
+Adapted - Sequence Accuracy 0.2
+Original - Sequence Accuracy 0.4
+
+Epoch 8
+Adapted - Sequence Accuracy 0.4
+Original - Sequence Accuracy 0.4
+
+Epoch 9
+Adapted - Sequence Accuracy 0.4
+Original - Sequence Accuracy 0.4
+
+Epoch 10
+Adapted - Sequence Accuracy 0.4
+Original - Sequence Accuracy 0.4
+
+Epoch 11
+Adapted - Sequence Accuracy 0.4
+Original - Sequence Accuracy 0.4
+
+Epoch 12
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 13
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 14
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 15
+Adapted - Sequence Accuracy 0.8
+Original - Sequence Accuracy 0.2
+
+Epoch 16
+Adapted - Sequence Accuracy 0.8
+Original - Sequence Accuracy 0.2
+
+Epoch 17
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.2
+
+Epoch 18
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 19
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.2
+
+Epoch 20
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.2
+
+Epoch 21
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 22
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 23
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 24
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 25
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
+
+Epoch 26
+Adapted - Sequence Accuracy 0.6
+Original - Sequence Accuracy 0.4
