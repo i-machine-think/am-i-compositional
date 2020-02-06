@@ -32,7 +32,7 @@ if __name__ == '__main__':
     predictions = csv.DictReader(open(args["file1"]), delimiter="\t")
     predictions_twin = csv.DictReader(open(args["file2"]), delimiter="\t")
 
-    for item, item_twin in zip(predictions, predictions_twin):   
+    for item, item_twin in zip(predictions, predictions_twin):
         l1 = item["prediction"].strip()
         l2 = item_twin["prediction"].strip()
         l3 = item["target"].strip()
@@ -52,7 +52,7 @@ if __name__ == '__main__':
         all_samples += 1
 
     # Report statistics to user
-    print("Consistent / All samples", consistent/all_samples)
-    print("Consistent & correct / All samples", consistent_correct/all_samples)
-    print("Consistent & wrong / All samples", consistent_wrong/all_samples)
-    print("Consistent & wrong / Wrong samples", consistent_wrong/wrong)
+    print("Consistent / All samples", consistent / all_samples)
+    print("Consistent & correct / All samples", consistent_correct / all_samples)
+    print("Consistent & wrong / All samples", consistent_wrong / all_samples)
+    print("Consistent & wrong / Wrong samples", consistent_wrong / wrong)

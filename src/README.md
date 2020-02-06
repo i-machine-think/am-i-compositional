@@ -36,7 +36,7 @@ Move into the `train/OpenNMT` or `train/Fairseq` folder, and dependent on the mo
 #### 2. Breakdown the performance per heldout composition (Section 7.2)
 
 Run the following script with the emitted predictions on test data for the model type of interest:
-`python sequence_accuracy_per_function.py --pred run1.txt run2.txt run3.txt --pattern "reverse echo"`.
+`python accuracy_per_pattern.py --pred run1.txt run2.txt run3.txt --pattern "reverse echo"`.
 The `pattern` argument refers to the consecutive functions of interest.
 
 ## Experiment: Productivity (Section 7.3)
@@ -46,11 +46,15 @@ Move into the `train/OpenNMT` or `train/Fairseq` folder, and dependent on the mo
 
 #### 2. Correlation length & depth (Section 7.3.1)
 - Run the following command per subplot, with all emitted predictions on test data for all model types listed:
-`python plot_length_depth.py --lstms2s "lstm_run=1.txt" "lstm_run=2.txt" "lstm_run=3.txt" --convs2s "convs2s_run=1.txt" "convs2s_run=2.txt" "convs2s_run=3.txt" 
+`python plot_length_depth.py --lstms2s "lstms2s_run=1.txt" "lstms2s_run=2.txt" "lstms2s_run=3.txt" --convs2s "convs2s_run=1.txt" "convs2s_run=2.txt" "convs2s_run=3.txt" 
 --transformer "transformer_run=1.txt" "transformer_run=2.txt" "transformer_run=3.txt" --output_filename depth.pdf --mode depth`
-- The available modes are `depth | length | number of functions`
+- The available modes are `depth | length | functions`
+- To visualise the statistics for the regular train-test PCFGSET setup on top of those for productivity, add the regular predictions in a similar fashion under arguments `--lstms2s_pcfg`, `--convs2s_pcfg` and `--transformer_pcfg`
 
 #### 3. EOS problem (Section 7.3)
+
+Move into the `evaluate` folder and run the following command using the relevant prediction traces from the productivity test per model:
+`python eos_problem.py --traces "lstms2s_run=1.txt" "lstms2s_run=2.txt" "lstms2s_run=3.txt"`
 
 ## Experiment: Substitutivity (Section 7.4)
 
@@ -62,9 +66,13 @@ Move into the `train/OpenNMT` or `train/Fairseq` folder, and dependent on the mo
 
 #### 3. Consistency score breakdown (Section 7.4.1-2) 
 
+Move into the `evaluate` folder and run the following command to compare the predictions for regular functions and their synonymous counterparts with relevant prediction files: `python consistency.py --file1 pred.txt --file2 pred_twin.txt`. 
+
 #### 4. Embedding distances (Section 7.4.1-2)
 
-Move into the `train/OpenNMT` or `train/Fairseq` folder, and run `python embedding_distances_opennmt.py -model run1.pt run2.pt run3.pt` that will print embedding distances for individual models as well as average statistics.
+- For LSTMS2S and Transformer move into the `train/OpenNMT`, and run `python embedding_distances.py -model run1.pt run2.pt run3.pt` that will print embedding distances for individual models as well as average statistics.
+
+- For ConvS2S move into the `train/Fairseq` folder, and run `python embedding_distances.py data_folder_run1 -model run1.pt` that will print embedding distances for individual models as well as average statistics. `data_folder_run1` refers to the folder in which you store the Fairseq prepared vocabularies corresponding to `run1.pt`.
 
 ## Experiment: Localism (Section 7.5)
 

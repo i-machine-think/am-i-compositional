@@ -114,13 +114,12 @@ def plot(lstms2s, transformer, convs2s, source_file_opennmt, target_file_opennmt
     if mode == "depth":
         plt.xlim(min(x_lstms2s), 14)
         plt.xticks(list(range(min(x_lstms2s), 14 + 1, 1)))
-    elif mode == "number of functions":
+    elif mode == "functions":
         plt.xlim(min(x_lstms2s), 15)
         plt.xticks(list(range(min(x_lstms2s), 15 + 1, 1)))
     else:
         plt.xticks(list(range(min(x_lstms2s) + 1, 50 + 1, 5)))
         plt.xlim(min(x_lstms2s), 50)
-        print(max(x_lstms2s))
     plt.ylim(-0.01, 1.01)
 
     # Share axes for subplots displayed next to each other in the paper, but keep grid
