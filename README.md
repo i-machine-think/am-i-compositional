@@ -10,7 +10,7 @@ If you have any questions, feel free to ask them: <dieuwkehupkes@gmail.com>.
 
 ## Tests
 
-The folder `data/pcfgset` contains six folders with the data to compute the overall task accuracy for PCFG set for a model, and the data and scripts to conduct the five main tests in the evaluation paradigm -- `systematicity`, `productivity`, `substitutivity`, `localism` and `overgeneralisation`.
+The folder [data/pcfgset](https://github.com/i-machine-think/am-i-compositional/tree/master/data/pcfgset) contains six folders with the data to compute the overall task accuracy for PCFG set for a model, and the data and scripts to conduct the five main tests in the evaluation paradigm -- [systematicity](https://github.com/i-machine-think/am-i-compositional/tree/master/data/pcfgset/systematicity), [productivity](https://github.com/i-machine-think/am-i-compositional/tree/master/data/pcfgset/productivity), [substitutivity](https://github.com/i-machine-think/am-i-compositional/tree/master/data/pcfgset/substitutivity), [localism](https://github.com/i-machine-think/am-i-compositional/tree/master/data/pcfgset/localism) and [overgeneralisation](https://github.com/i-machine-think/am-i-compositional/tree/master/data/pcfgset/overgeneralisation).
 In the folders for these tests you can find also the data to conduct the auxiliary tests that we conducted in the paper to further clarify the results of the different tests in the evaluation paradigm.
 
 ## Auxiliary scripts
