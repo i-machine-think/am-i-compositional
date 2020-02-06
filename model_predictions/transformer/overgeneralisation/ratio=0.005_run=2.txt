@@ -1,0 +1,101 @@
+RUN 2
+
+Epoch 1
+Adapted - Sequence Accuracy: 0.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 2
+Adapted - Sequence Accuracy: 0.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 3
+Adapted - Sequence Accuracy: 0.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 4
+Adapted - Sequence Accuracy: 0.0
+Original - Sequence Accuracy: 0.039525691699604744
+
+Epoch 5
+Adapted - Sequence Accuracy: 0.003952569169960474
+Original - Sequence Accuracy: 0.06324110671936758
+
+Epoch 6
+Adapted - Sequence Accuracy: 0.007905138339920948
+Original - Sequence Accuracy: 0.07509881422924901
+
+Epoch 7
+Adapted - Sequence Accuracy: 0.1067193675889328
+Original - Sequence Accuracy: 0.18181818181818182
+
+Epoch 8
+Adapted - Sequence Accuracy: 0.2885375494071146
+Original - Sequence Accuracy: 0.1422924901185771
+
+Epoch 9
+Adapted - Sequence Accuracy: 0.33992094861660077
+Original - Sequence Accuracy: 0.07114624505928854
+
+Epoch 10
+Adapted - Sequence Accuracy: 0.7747035573122529
+Original - Sequence Accuracy: 0.003952569169960474
+
+Epoch 11
+Adapted - Sequence Accuracy: 0.8300395256916996
+Original - Sequence Accuracy: 0.0
+
+Epoch 12
+Adapted - Sequence Accuracy: 0.857707509881423
+Original - Sequence Accuracy: 0.0
+
+Epoch 13
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 14
+Adapted - Sequence Accuracy: 0.9960474308300395
+Original - Sequence Accuracy: 0.0
+
+Epoch 15
+Adapted - Sequence Accuracy: 0.9881422924901185
+Original - Sequence Accuracy: 0.0
+
+Epoch 16
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 17
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 18
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 19
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 20
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 21
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 22
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 23
+Adapted - Sequence Accuracy: 0.9881422924901185
+Original - Sequence Accuracy: 0.0
+
+Epoch 24
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
+
+Epoch 25
+Adapted - Sequence Accuracy: 1.0
+Original - Sequence Accuracy: 0.0
