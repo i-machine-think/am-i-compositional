@@ -2,7 +2,7 @@
 
 This repository contains data and scrips to use the tests from the compositionality evaluation paradigm described in the paper.
 
-Dieuwke Hupkes, Verna Dankers, Mathijs Mul and Elia Bruni. 2019. [The compositionality of neural networks: integrating symbolism and connectionism](https://arxiv.org/abs/1908.08351).
+Dieuwke Hupkes, Verna Dankers, Mathijs Mul and Elia Bruni. 2020. [ompositionality decomposed: how do neural networks generalise](https://jair.org/index.php/jair/article/view/11674). Journal of Artificial Intelligence Research (JAIR).
 
 Below we provide a brief description of the structure of the repository.
 The explanation for usage of the individual scripts can be found in the corresponding folders.
